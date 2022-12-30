@@ -1,0 +1,297 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins" , sans-serif;
+}
+body{
+  background-image: url("../images/jj.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: rgb(255,255,255);
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar img {
+  width: 0px;
+}
+.sidebar.open img {
+  width: 150px;
+  height: 90px;
+  transition: all 0.4s ease-out;
+}
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.5s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: black;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: rgb(11, 116, 228);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  color: white;
+  opacity: 1;
+  pointer-events: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.sidebar li .active{
+  color: white ;
+  background: rgb(11, 116, 228);
+}
+.sidebar li a:hover{
+  color: white ;
+  background: rgb(11, 116, 228);
+}
+.sidebar li a .links_name{
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+.sidebar li a .active{
+  color: white;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  color: white;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar .profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  background: rgb(11, 116, 228);
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar .profile .profile-details i , #name{
+  font-size: 0px;
+}
+.sidebar.open .profile{
+  width: 250px;
+}
+.sidebar.open .profile .profile-details #user{
+  color: white;
+  font-size: 18px;
+}
+.sidebar.open .profile .profile-details #name{
+  color: white;
+  font-size: 16px;
+}
+.sidebar .profile .profile-details #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 18px;
+  transform: translateY(-50%);
+  background: rgb(11, 116, 228);
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar .profile .profile-details #log_out:hover{
+  color: white;
+}
+.sidebar.open .profile .profile-details #log_out{
+  width: 50px;
+  background: none;
+}
+.home-section{
+  position: relative;
+  min-height: 100vh;
+  top: 0px;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+#titre{
+  position: relative;
+  top: 2em;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  border-radius: 25px;
+  background: white;
+  box-shadow:inset 0 0 .1em rgb(2, 15, 2), 0 0 .5em rgb(3, 19, 3);
+}
+.upper-div{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  margin-top: 3.3%;
+  border-radius: 25px;
+  padding: 25px 0px;
+  background-color: white;
+  box-shadow:inset 0 0 .1em rgb(2, 15, 2), 0 0 .5em rgb(3, 19, 3);
+}
+.upper-div a .btn{
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+  width: 125px;
+  height: 40px;
+  border: rgb(255, 255, 255);
+  border-radius: 10px;
+  background: rgb(11, 116, 228);
+  cursor: pointer;
+}
+.upper-div a .btn:hover{
+  background: rgba(11, 116, 228,0.8);
+}
+.form{
+  position: relative;
+  width: 40%;
+  height: 80%;
+  display: flex;
+  margin: auto;
+  margin-top: 3.3%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  padding: 25px 0px;
+  background-color:white;
+  box-shadow:inset 0 0 .1em rgb(2, 15, 2), 0 0 .5em rgb(3, 19, 3);
+}
+select{
+  height: 30PX;
+  margin-top: 40px;
+  width: 300px;
+  text-align: center;
+  text-decoration: solid;
+  display: inline;
+}
+#Btn_Valider{
+  color: white;
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 35px 100px;
+  width: 100px;
+  height: 40px;
+  border: rgb(255, 255, 255);
+  border-radius: 10px;
+  background: rgb(11, 116, 228);
+  cursor: pointer;
+}
+#Btn_Valider:hover{
+  background: rgba(11, 116, 228,0.8);
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
